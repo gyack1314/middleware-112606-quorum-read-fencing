@@ -1,0 +1,15 @@
+{"at":0,"kind":"members","record":{"nodes":["a","b","c"]}}
+{"at":0,"kind":"leader","record":{"node":"a","term":3}}
+{"at":1,"kind":"put","record":{"entry":"old","term":3,"index":1,"key":"run","value":"pending"}}
+{"at":2,"kind":"replica","record":{"node":"a","term":3,"entry":"old","index":1}}
+{"at":3,"kind":"leader","record":{"node":"b","term":4}}
+{"at":4,"kind":"put","record":{"entry":"new","term":4,"index":1,"key":"run","value":"complete"}}
+{"at":5,"kind":"replica","record":{"node":"b","term":4,"entry":"new","index":1}}
+{"at":6,"kind":"replica","record":{"node":"a","term":3,"entry":"old","index":1}}
+{"at":7,"kind":"inspect","record":{"entry":"new"}}
+{"at":8,"kind":"replica","record":{"node":"c","term":4,"entry":"new","index":1}}
+{"at":9,"kind":"apply","record":{"node":"c","entry":"new","index":1}}
+{"at":10,"kind":"read","record":{"qid":"r","target":"c","key":"run","min_index":1,"deadline":15}}
+{"at":11,"kind":"witness","record":{"qid":"r","node":"b","term":4,"commit":1}}
+{"at":12,"kind":"witness","record":{"qid":"r","node":"c","term":4,"commit":1}}
+{"at":13,"kind":"inspect","record":{"qid":"r"}}

@@ -1,0 +1,12 @@
+[
+  "apply",
+  "inspect",
+  "leader",
+  "members",
+  "put",
+  "read",
+  "replica",
+  "restart",
+  "tick",
+  "witness"
+]
