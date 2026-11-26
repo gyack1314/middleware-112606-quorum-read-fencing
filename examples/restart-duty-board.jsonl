@@ -1,0 +1,14 @@
+{"at":0,"kind":"members","record":{"nodes":["n1","n2","n3"]}}
+{"at":0,"kind":"leader","record":{"node":"n1","term":1}}
+{"at":1,"kind":"put","record":{"entry":"e1","term":1,"index":1,"key":"round","value":"closed"}}
+{"at":2,"kind":"replica","record":{"node":"n1","term":1,"entry":"e1","index":1}}
+{"at":2,"kind":"replica","record":{"node":"n2","term":1,"entry":"e1","index":1}}
+{"at":3,"kind":"apply","record":{"node":"n3","entry":"e1","index":1}}
+{"at":4,"kind":"read","record":{"qid":"r","target":"n2","key":"round","min_index":1,"deadline":30}}
+{"at":5,"kind":"witness","record":{"qid":"r","node":"n1","term":1,"commit":1}}
+{"at":6,"kind":"restart","record":{}}
+{"at":7,"kind":"inspect","record":{}}
+{"at":8,"kind":"witness","record":{"qid":"r","node":"n2","term":1,"commit":1}}
+{"at":9,"kind":"inspect","record":{"qid":"r"}}
+{"at":10,"kind":"apply","record":{"node":"n2","entry":"e1","index":1}}
+{"at":11,"kind":"inspect","record":{"qid":"r"}}

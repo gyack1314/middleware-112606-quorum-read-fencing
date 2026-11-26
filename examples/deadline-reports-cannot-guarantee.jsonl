@@ -1,0 +1,14 @@
+{"at":0,"kind":"members","record":{"nodes":["n1","n2","n3","n4","n5"]}}
+{"at":0,"kind":"leader","record":{"node":"n1","term":1}}
+{"at":1,"kind":"put","record":{"entry":"e1","term":1,"index":1,"key":"round","value":"sealed"}}
+{"at":2,"kind":"replica","record":{"node":"n1","term":1,"entry":"e1","index":1}}
+{"at":2,"kind":"replica","record":{"node":"n2","term":1,"entry":"e1","index":1}}
+{"at":2,"kind":"replica","record":{"node":"n3","term":1,"entry":"e1","index":1}}
+{"at":3,"kind":"apply","record":{"node":"n4","entry":"e1","index":1}}
+{"at":4,"kind":"read","record":{"qid":"r-timeout","target":"n4","key":"round","min_index":1,"deadline":8}}
+{"at":5,"kind":"witness","record":{"qid":"r-timeout","node":"n1","term":1,"commit":1}}
+{"at":5,"kind":"witness","record":{"qid":"r-timeout","node":"n2","term":1,"commit":1}}
+{"at":8,"kind":"tick","record":{"now":8}}
+{"at":9,"kind":"witness","record":{"qid":"r-timeout","node":"n3","term":1,"commit":1}}
+{"at":10,"kind":"inspect","record":{"qid":"r-timeout"}}
+{"at":11,"kind":"inspect","record":{}}
